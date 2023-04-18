@@ -18,7 +18,6 @@ public partial class MainPage : ContentPage
 
         while (reader.Read())
         {
-            Debug.WriteLine("coucou");
             Debug.WriteLine(reader.GetString(0));
         }
     }
