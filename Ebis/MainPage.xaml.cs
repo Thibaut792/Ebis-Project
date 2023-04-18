@@ -1,24 +1,28 @@
-﻿namespace Ebis;
+﻿using MySqlConnector;
+using System.Diagnostics;
+
+namespace Ebis;
+
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    public MainPage()
+    {
+        InitializeComponent();
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+        var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");
+        connection.Open();
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        var command = new MySqlCommand("SELECT Adresse_Ville from station;", connection);
+        var reader = command.ExecuteReader();
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        while (reader.Read())
+        {
+            Debug.WriteLine("coucou");
+            Debug.WriteLine(reader.GetString(0));
+        }
+    }
 }
+
+
 
