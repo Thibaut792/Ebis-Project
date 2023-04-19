@@ -10,7 +10,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");
+        var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=POKEMON17;Database=ebis_project");
         connection.Open();
 
         var command = new MySqlCommand("SELECT Adresse_Ville from station;", connection);
@@ -20,7 +20,24 @@ public partial class MainPage : ContentPage
         {
             Debug.WriteLine(reader.GetString(0));
         }
+
     }
+
+    private async void OnPage1ButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
+
+    private async void OnPage2ButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
+
+    private async void OnPage3ButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
+
 }
 
 
