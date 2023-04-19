@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Ebis.Model"
+             xmlns:vm="clr-namespace:Ebis.ViewModel"
+             x:Class="Ebis.View.MainPage">
+    <StackLayout>
+        <Label Text="test affichage" FontSize="20" TextColor="White" Padding="2">
+        </Label>
+    </StackLayout>
+</ContentPage>
