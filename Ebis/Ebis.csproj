@@ -63,6 +63,9 @@
 	  <Compile Update="JournalEntretien.xaml.cs">
 	    <DependentUpon>JournalEntretien.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="AcceuilPage.xaml.cs">
+	    <DependentUpon>AcceuilPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
