@@ -55,7 +55,6 @@
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
 	  <PackageReference Include="MySqlConnector" Version="2.2.5" />
-	  <PackageReference Include="Uno.UI" Version="4.8.24" />
 	</ItemGroup>
 
 	<ItemGroup>
