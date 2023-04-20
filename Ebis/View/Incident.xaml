@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ebis.View.Incident"
+             xmlns:model="clr-namespace:Ebis.Model"
+             Title="Incident">
+    <Grid
+        RowDefinitions="*,Auto"
+        ColumnDefinitions="*,*">
+        <CollectionView
+            ItemsSource="{Binding Incidents}"
+            Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Incident">
+                    <HorizontalStackLayout Padding="10" Spacing="15">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="{Binding idJournal_Incident}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="{Binding details_incident}" FontSize="20" TextColor="White" Padding="2"></Label>
+                            <Label Text="{Binding libelle}" FontSize="15" TextColor="White" Padding="2"></Label>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
