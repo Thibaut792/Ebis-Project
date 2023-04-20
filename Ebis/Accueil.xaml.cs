@@ -8,11 +8,12 @@ public partial class AccueilPage : ContentPage
 	}
     private async void OnButton1Clicked(object sender, EventArgs e)
     {
+
         await Navigation.PushAsync(new ListBorne());
     }
     private async void OnButton2Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AccueilPage());
+        await Navigation.PushAsync(new Technicien());
     }
     private async void OnButton3Clicked(object sender, EventArgs e)
     {
@@ -20,7 +21,7 @@ public partial class AccueilPage : ContentPage
     }
     private async void OnButton4Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AccueilPage());
+        await Navigation.PushAsync(new Geolocalisation());
     }
 
 }
