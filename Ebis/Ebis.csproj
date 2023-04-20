@@ -49,8 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Technicien.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
 	  <PackageReference Include="MySqlConnector" Version="2.2.5" />
+	  <PackageReference Include="Uno.UI" Version="4.8.24" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -69,6 +74,9 @@
 	  <MauiXaml Update="Accueil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Geolocalisation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="JournalDesOperations.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -79,6 +87,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ListBorne.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Technicien.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
