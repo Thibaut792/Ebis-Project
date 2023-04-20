@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ebis.JournalDesOperations"
+             Title="Ebis Journal Des Operations">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+        <Label HorizontalOptions="Center" Text="Journal des operations" FontSize="Large" TextColor="#2196F3" FontAttributes="Bold" />
+        <BoxView Color="#000000" HeightRequest="3" HorizontalOptions="StartAndExpand" WidthRequest="50" Margin="0,10,0,30" />
+        
+        <StackLayout Orientation="Vertical" BackgroundColor="#000000" Padding="10" Margin="0,0,0,30">
+            <Label Text="Type de charge : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+            <Label Text="Date et heure de début de charge : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+            <Label Text="Date et heure de fin de charge : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+            <Label Text="KW consommé : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

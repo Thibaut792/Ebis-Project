@@ -22,20 +22,24 @@ public partial class MainPage : ContentPage
         }
 
     }
-
     private async void OnPage1ButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new JournalDesOperations());
     }
 
     private async void OnPage2ButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new JournalDesIncidents());
     }
 
     private async void OnPage3ButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new JournalEntretien());
+    }
+
+    private async void OnPage4ButtonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AccueilPage());
     }
 
 }
