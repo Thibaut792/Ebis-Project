@@ -49,17 +49,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Technicien.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
 	  <PackageReference Include="MySqlConnector" Version="2.2.5" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Accueil.xaml.cs">
+	    <DependentUpon>Accueil.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="JournalDesIncidents.xaml.cs">
+	    <DependentUpon>JournalDesIncidents.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="JournalEntretien.xaml.cs">
+	    <DependentUpon>JournalEntretien.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="AcceuilPage.xaml.cs">
+	    <DependentUpon>AcceuilPage.xaml</DependentUpon>
+
 	  <Compile Update="View\MainPage.xaml.cs">
 	    <DependentUpon>MainPage.xaml</DependentUpon>
+
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+
+	  <MauiXaml Update="Accueil.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Geolocalisation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="JournalDesOperations.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="JournalDesIncidents.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="JournalEntretien.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ListBorne.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Technicien.xaml">
+
 	  <MauiXaml Update="View\Incident.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -67,6 +105,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\OperationPage.xaml">
+
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

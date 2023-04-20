@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ebis.JournalEntretien"
+             Title="EBis Journal Entretien">
+    
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+        <Label HorizontalOptions="Center" Text="Journal entretien" FontSize="Large" TextColor="#2196F3" FontAttributes="Bold" />
+        <BoxView Color="#000000" HeightRequest="3" HorizontalOptions="StartAndExpand" WidthRequest="50" Margin="0,10,0,30" />
+
+        <StackLayout Orientation="Vertical" BackgroundColor="#000000" Padding="10" Margin="0,0,0,30">
+            <Label Text="Numéro de la borne : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+            <Label Text="Positions géographique : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+            <Label Text="Le(s) element(s) vérifés ou remplacés : " FontSize="Small" TextColor="#F5F5F5" />
+            <BoxView Color="#000000" HeightRequest="1" HorizontalOptions="FillAndExpand" WidthRequest="100" Margin="0,5,0,5" />
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
