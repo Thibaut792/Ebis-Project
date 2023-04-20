@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Ebis.Model"
+             xmlns:vm="clr-namespace:Ebis.ViewModel"
              x:Class="Ebis.View.MainPage">
     <Grid
      RowDefinitions="*,Auto"
      ColumnDefinitions="*,*">
-    <CollectionView 
+        <CollectionView 
     ItemsSource="{Binding Bornes}"
     Grid.ColumnSpan="2"
     HorizontalOptions="CenterAndExpand">
@@ -14,14 +15,38 @@
                 <DataTemplate x:DataType="model:Borne" >
                     <Frame BorderColor="White" Padding="2">
                         <HorizontalStackLayout Padding="10" Spacing="15" HorizontalOptions="Center">
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BorneViewModel}},Path=GoToDetailsBorneCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                            </HorizontalStackLayout.GestureRecognizers>
                             <Label Text="{Binding idBorne}" FontSize="20" TextColor="White"></Label>
-                            <Label Text="{Binding date_mise_en_service}" FontSize="15" TextColor="White"></Label>
-                            <Label Text="{Binding date_derniere_revision}" FontSize="15" TextColor="White"></Label>
+                            <Label Text="{Binding Adresse_Ville}" FontSize="15" TextColor="White"></Label>
+                            <Label Text="{Binding Adresse_Rue}" FontSize="15" TextColor="White"></Label>
+                            <Label Text="{Binding Code_Postal}" FontSize="15" TextColor="White"></Label>
                             <Label Text="{Binding libelle_type_charge}" FontSize="15" TextColor="White"></Label>
                         </HorizontalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame Padding="6" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Journal des opérations" Clicked="OnButton1Clicked" TextColor="White" BackgroundColor="#EF6C00"  FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+            <Frame Padding="6" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Journal des incidents" Clicked="OnButton2Clicked" TextColor="White" BackgroundColor="#66BB6A" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+            <Frame Padding="6" Margin="10" CornerRadius="8" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Journal d'entetien" Clicked="OnButton3Clicked" TextColor="White" BackgroundColor="#2196F3" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+
+        </StackLayout>
+        <VerticalStackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame Padding="6" Margin="10" CornerRadius="8" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Accueil" Clicked="OnButton4Clicked" TextColor="White" BackgroundColor="DarkRed" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+        </StackLayout>
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>

@@ -10,12 +10,14 @@
         <CollectionView
             ItemsSource="{Binding Incidents}"
             Grid.ColumnSpan="2">
-            <CollectionView.ItemTemplate>
+            <CollectionView.ItemTemplate VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
                 <DataTemplate x:DataType="model:Incident">
                     <HorizontalStackLayout Padding="10" Spacing="15">
                         <VerticalStackLayout VerticalOptions="Center">
                             <Label Text="{Binding idJournal_Incident}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="Details incidents : " FontSize="Small" TextColor="#F5F5F5" ></Label>
                             <Label Text="{Binding details_incident}" FontSize="20" TextColor="White" Padding="2"></Label>
+                            <Label Text="Type d'incidents : " FontSize="Small" TextColor="#F5F5F5" />
                             <Label Text="{Binding libelle}" FontSize="15" TextColor="White" Padding="2"></Label>
                         </VerticalStackLayout>
                     </HorizontalStackLayout>

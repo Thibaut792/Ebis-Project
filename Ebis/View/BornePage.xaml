@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ebis.View.BornePage"
+             xmlns:model="clr-namespace:Ebis.Model"
+             Title="BornePage">
+    <Grid
+     RowDefinitions="*,Auto"
+     ColumnDefinitions="*,*">
+        <CollectionView 
+    ItemsSource="{Binding Bornes}"
+    Grid.ColumnSpan="2"
+    HorizontalOptions="CenterAndExpand">
+            <CollectionView.ItemTemplate >
+                <DataTemplate x:DataType="model:Borne" >
+                    <Frame BorderColor="White" Padding="2">
+                        <HorizontalStackLayout Padding="10" Spacing="15" HorizontalOptions="Center">
+                            <Label Text="{Binding idBorne}" FontSize="20" TextColor="White"></Label>
+                            <Label Text="{Binding date_mise_en_service}" FontSize="15" TextColor="White"></Label>
+                            <Label Text="{Binding date_derniere_revision}" FontSize="15" TextColor="White"></Label>
+                            <Label Text="{Binding libelle_type_charge}" FontSize="15" TextColor="White"></Label>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

@@ -10,14 +10,18 @@
         <CollectionView
             ItemsSource="{Binding Operations}"
             Grid.ColumnSpan="2">
-            <CollectionView.ItemTemplate>
+            <CollectionView.ItemTemplate VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
                 <DataTemplate x:DataType="model:Operation">
                     <HorizontalStackLayout Padding="10" Spacing="15">
                         <VerticalStackLayout VerticalOptions="Center">
                             <Label Text="{Binding idBorne}" FontSize="20" TextColor="White" Padding="2"></Label>
+                            <Label Text="Date et heure de début de charge : " FontSize="Small" TextColor="#F5F5F5" />
                             <Label Text="{Binding dateheureDebut}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="Date et heure de fin de charge : " FontSize="Small" TextColor="#F5F5F5" />
                             <Label Text="{Binding dateheurefin}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="KW consommé : " FontSize="Small" TextColor="#F5F5F5" />
                             <Label Text="{Binding nbKwHeure}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="Type de charge : " FontSize="Small" TextColor="#F5F5F5" />
                             <Label Text="{Binding libelle_type_charge}" FontSize="15" TextColor="White" Padding="2"></Label>
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
