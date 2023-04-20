@@ -8,6 +8,6 @@
 
     <ShellContent
         Title="Borne"
-        ContentTemplate="{DataTemplate view:OperationPage}"
+        ContentTemplate="{DataTemplate view:Incident}"
         Route="MainPage"/>
 </Shell>
