@@ -1,4 +1,7 @@
-﻿namespace Ebis;
+﻿using Microsoft.Maui.Handlers;
+using Microsoft.Maui.LifecycleEvents;
+
+namespace Ebis;
 
 public partial class App : Application
 {
@@ -8,4 +11,8 @@ public partial class App : Application
 
 		MainPage = new AppShell();
 	}
+
+
 }
+
+

@@ -3,9 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Ebis.Model"
              xmlns:vm="clr-namespace:Ebis.ViewModel"
+             xmlns:service="clr-namespace:Ebis.Services"
              x:Class="Ebis.View.MainPage">
-    <StackLayout>
-        <Label Text="test affichage" FontSize="20" TextColor="White" Padding="2">
-        </Label>
-    </StackLayout>
+    <Grid
+        RowDefinitions="*,Auto"
+        ColumnDefinitions="*,*">
+        <CollectionView
+            ItemsSource="{Binding Bornes}"
+            Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Borne">
+                    <HorizontalStackLayout Padding="10" Spacing="15">
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="{Binding idBorne}" FontSize="20" TextColor="White" Padding="2"></Label>
+                            <Label Text="{Binding date_mise_en_service}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="{Binding date_derniere_revision}" FontSize="15" TextColor="White" Padding="2"></Label>
+                            <Label Text="{Binding libelle_type_charge}" FontSize="15" TextColor="White" Padding="2"></Label>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

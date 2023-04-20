@@ -1,4 +1,8 @@
-﻿namespace Ebis;
+﻿using Ebis.Services;
+using Ebis.View;
+using Ebis.ViewModel;
+
+namespace Ebis;
 
 public static class MauiProgram
 {
@@ -13,6 +17,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<BorneViewModel>();
+        builder.Services.AddSingleton<BorneService>();
+        return builder.Build();
 	}
 }

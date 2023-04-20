@@ -1,31 +1,30 @@
 ﻿using Azure;
 using Ebis.Model;
 using MySqlConnector;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace Ebis.Services
 {
     public class BorneService
     {
-        List<Borne> bornesList = new();
-        public List<Borne> GetBorne(int limite)
+        
+        public List<Borne> GetBorne()
         {
             var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");
             connection.Open();
 
-            var command = new MySqlCommand("SELECT Adresse_Ville from station;", connection);
-            var reader = command.ExecuteReader();
+            var Borne = new MySqlCommand("SELECT idBorne, date_mise_en_service, date_derniere_revision, libelle_type_charge  FROM ebis_project.borne join type_charge on borne.fk_type_charge = code_type_charge; ", connection);
+            var reader = Borne.ExecuteReader();
 
-
-            List<Borne> centresLimite = new();
-            for (int i = 0; i < limite; i++)
+            List<Borne> Bornes = new();
+            while (reader.Read())
             {
-                centresLimite.Add(bornesList[i]);
+                Borne borne = new();
+                borne.idBorne = (Int32)reader["idBorne"];
+                borne.date_mise_en_service = (DateTime)reader["date_mise_en_service"];
+                borne.date_derniere_revision = (DateTime)reader["date_derniere_revision"];
+                borne.libelle_type_charge = (String)reader["libelle_type_charge"];
+                Bornes.Add(borne);
             }
-            return bornesList;
+            return Bornes;
         }
     }
 }

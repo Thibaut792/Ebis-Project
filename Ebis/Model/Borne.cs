@@ -8,11 +8,13 @@ namespace Ebis.Model
 {
     public class Borne
     {
-        public string idBorne { get; set; }
-        public string date_mise_en_service { get; set; }
-        public string date_derniere_revision { get; set; }
-        public string date_fin_service { get; set; }
+        public Int32 idBorne { get; set; }
+        public DateTime date_mise_en_service { get; set; }
+        public DateTime date_derniere_revision { get; set; }
+        public DateTime date_fin_service { get; set; }
         public string fk_station { get; set; }
         public string fk_type_charge { get; set; }
+
+        public string libelle_type_charge { get; set; }
     }
 }

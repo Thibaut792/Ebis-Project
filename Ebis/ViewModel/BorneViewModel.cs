@@ -17,12 +17,9 @@ namespace Ebis.ViewModel
         public BorneViewModel(BorneService service)
         {
             this.service = service;
-        }
-        async Task GetCentresDeDon()
-        {
-            var bornes = service.GetBorne(20);
-            if (bornes.Count != 0)
-                bornes.Clear();
+
+            var bornes = service.GetBorne();
+
             foreach (var borne in bornes)
             {
                 Bornes.Add(borne);

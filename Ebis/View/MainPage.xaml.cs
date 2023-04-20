@@ -1,6 +1,6 @@
 using Ebis.ViewModel;
 
-namespace Ebis;
+namespace Ebis.View;
 
 
 public partial class MainPage : ContentPage
@@ -11,10 +11,6 @@ public partial class MainPage : ContentPage
         BindingContext = viewModel;
     }
 
-    private void InitializeComponent()
-    {
-        throw new NotImplementedException();
-    }
 }
 
 
