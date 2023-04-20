@@ -4,8 +4,7 @@ using MySqlConnector;
 namespace Ebis.Services
 {
     public class BorneService
-    {
-        
+    {  
         public List<Borne> GetBorne()
         {
             var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");

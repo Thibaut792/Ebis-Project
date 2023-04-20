@@ -14,7 +14,7 @@ namespace Ebis.Model
         public DateTime date_fin_service { get; set; }
         public string fk_station { get; set; }
         public string fk_type_charge { get; set; }
-
         public string libelle_type_charge { get; set; }
+
     }
 }
