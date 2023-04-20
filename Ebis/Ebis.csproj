@@ -69,10 +69,15 @@
 	  </Compile>
 	  <Compile Update="AcceuilPage.xaml.cs">
 	    <DependentUpon>AcceuilPage.xaml</DependentUpon>
+
+	  <Compile Update="View\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+
 	  <MauiXaml Update="Accueil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -92,6 +97,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Technicien.xaml">
+
+	  <MauiXaml Update="View\Incident.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\OperationPage.xaml">
+
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
