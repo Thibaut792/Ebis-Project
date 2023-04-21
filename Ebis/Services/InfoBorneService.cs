@@ -12,7 +12,7 @@ namespace Ebis.Services
     {
        public List<Borne> GetBorne()
         {
-            var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");
+            var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=POKEMON17;Database=ebis_project");
             connection.Open();
 
             var Borne = new MySqlCommand("SELECT idBorne, date_mise_en_service, date_derniere_revision, libelle_type_charge  FROM ebis_project.borne join type_charge on borne.fk_type_charge = code_type_charge; ", connection);

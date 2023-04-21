@@ -13,7 +13,7 @@ namespace Ebis.Services
 
         public List<Incident> GetIncident()
         {
-            var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=2010Thibaut;Database=ebis_project");
+            var connection = new MySqlConnection("Server=127.0.0.1;User ID=root;Password=POKEMON17;Database=ebis_project");
             connection.Open();
 
             var Incident = new MySqlCommand("SELECT details_incident, libelle FROM ebis_project.journal_incident join type_incident on fk_type_incident = id_type_incident limit 5;", connection);

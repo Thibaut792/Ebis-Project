@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ebis.View.OperationPage"
              xmlns:model="clr-namespace:Ebis.Model"
-             Title="OperationPage">
+             Title="Ebis Operation Page">
     <Grid
         RowDefinitions="*,Auto"
         ColumnDefinitions="*,*">

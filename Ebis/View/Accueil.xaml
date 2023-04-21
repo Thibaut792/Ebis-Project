@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ebis.View.Accueil"
+             xmlns:vm="clr-namespace:Ebis.ViewModel"
+             x:DataType="vm:AccueilViewModel"
+             Title="Accueil"
+             BackgroundColor="#000000">
+    
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">                                                 
+            <Frame Padding="10" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button 
+                    Text="Borne" 
+                    TextColor="White" 
+                    BackgroundColor="#EF6C00" 
+                    FontSize="Large" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10" 
+                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:AccueilViewModel}},
+                          Path=GoToBornePageCommand}"/>
+            </Frame>
+            <Frame Padding="10" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Gestion des techniciens" TextColor="White" BackgroundColor="#66BB6A" FontSize="Large" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+            <Frame Padding="10" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Tableau de bord" TextColor="White" BackgroundColor="#2196F3" FontSize="Large" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+            <Frame Padding="10" Margin="10" CornerRadius="10" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Geocaliser les bornes" TextColor="White" BackgroundColor="#9C27B0" FontSize="Large" FontAttributes="Bold" CornerRadius="10"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

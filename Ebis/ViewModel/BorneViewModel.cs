@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Ebis.Model;
 using Ebis.Services;
+using Ebis.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -33,6 +34,32 @@ namespace Ebis.ViewModel
                 {
                 {"Borne", borne}
                 });
+        }
+        [RelayCommand]
+        async Task GoToEntretien()
+        {
+            await Shell.Current.GoToAsync(
+                "EntretienPage",
+                true
+               );
+        }
+        
+        [RelayCommand]
+        async Task GoToJournalIncidents()
+        {
+            await Shell.Current.GoToAsync(
+                "Incident",
+                true
+               );
+        }
+
+        [RelayCommand]
+        async Task GoToJournalOperation()
+        {
+            await Shell.Current.GoToAsync(
+                "OperationPage",
+                true
+               );
         }
     }
 }
