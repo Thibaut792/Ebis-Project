@@ -73,9 +73,12 @@
 	  <MauiXaml Update="View\OperationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+<<<<<<< HEAD
 	  <MauiXaml Update="View\TableauDeBord.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+=======
+>>>>>>> 7399fb664b06cf02e446d29a7b0e59317d2d2bf5
 	  <MauiXaml Update="View\Technicien.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
