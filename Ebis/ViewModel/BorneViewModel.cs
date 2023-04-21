@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
+
 namespace Ebis.ViewModel
 {
    public partial class BorneViewModel
@@ -58,6 +59,15 @@ namespace Ebis.ViewModel
         {
             await Shell.Current.GoToAsync(
                 "OperationPage",
+                true
+               );
+        }
+
+        [RelayCommand]
+        async Task GoToTechnicien()
+        {
+            await Shell.Current.GoToAsync(
+                "Technicien",
                 true
                );
         }

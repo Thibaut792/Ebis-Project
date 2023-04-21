@@ -12,6 +12,7 @@ namespace Ebis.Model
         public string details_incident { get; set; }
         public Int32 fk_type_incident { get; set; }
 
+        public Int32 idBorne { get; set; }
         public string libelle { get; set; }
     }
 }

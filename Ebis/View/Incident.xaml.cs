@@ -4,7 +4,7 @@ namespace Ebis.View;
 
 public partial class Incident : ContentPage
 {
-	public Incident(BorneViewModel viewModel)
+	public Incident(IncidentViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

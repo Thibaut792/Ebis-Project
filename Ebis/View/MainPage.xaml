@@ -43,6 +43,12 @@
                           Path=GoToEntretienCommand}"/>
             </Frame>
 
+            <Frame Padding="6" Margin="10" CornerRadius="8" BackgroundColor="#FFFFFF" HasShadow="True">
+                <Button Text="Technicien" TextColor="White" BackgroundColor="#2196F3" FontAttributes="Bold" CornerRadius="10" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:BorneViewModel}},
+                          Path=GoToTechnicienCommand}"/>
+            </Frame>
+
+           
         </StackLayout>
         <VerticalStackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

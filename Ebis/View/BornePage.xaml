@@ -3,26 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ebis.View.BornePage"
              xmlns:model="clr-namespace:Ebis.Model"
+             xmlns:vm="clr-namespace:Ebis.ViewModel"
+             x:DataType="vm:infoBorneViewModel"
              Title="BornePage">
-    <Grid
-     RowDefinitions="*,Auto"
-     ColumnDefinitions="*,*">
-        <CollectionView 
-    ItemsSource="{Binding Bornes}"
-    Grid.ColumnSpan="2"
-    HorizontalOptions="CenterAndExpand">
-            <CollectionView.ItemTemplate >
-                <DataTemplate x:DataType="model:Borne" >
-                    <Frame BorderColor="White" Padding="2">
-                        <HorizontalStackLayout Padding="10" Spacing="15" HorizontalOptions="Center">
-                            <Label Text="{Binding idBorne}" FontSize="20" TextColor="White"></Label>
-                            <Label Text="{Binding date_mise_en_service}" FontSize="15" TextColor="White"></Label>
-                            <Label Text="{Binding date_derniere_revision}" FontSize="15" TextColor="White"></Label>
-                            <Label Text="{Binding libelle_type_charge}" FontSize="15" TextColor="White"></Label>
-                        </HorizontalStackLayout>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </Grid>
+    <HorizontalStackLayout Padding="10" Spacing="15" HorizontalOptions="Center">
+        <Label Text="{Binding BorneAfficher.idBorne}" FontSize="20" TextColor="White"></Label>
+        <Label Text="{Binding BorneAfficher.date_mise_en_service}" FontSize="15" TextColor="White"></Label>
+        <Label Text="{Binding BorneAfficher.date_derniere_revision}" FontSize="15" TextColor="White"></Label>
+        <Label Text="{Binding BorneAfficher.libelle_type_charge}" FontSize="15" TextColor="White"></Label>
+    </HorizontalStackLayout>
 </ContentPage>

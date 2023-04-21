@@ -32,6 +32,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<EntretienPage>();
         builder.Services.AddSingleton<EntretienViewModel>();
         builder.Services.AddSingleton<EntretienService>();
+        builder.Services.AddSingleton<Technicien>();
+        builder.Services.AddSingleton<TechnicienService>();
+        builder.Services.AddSingleton<TechnicienViewModel>();
 
 
         return builder.Build();

@@ -13,10 +13,13 @@ using Ebis.Services;
 namespace Ebis.ViewModel
 {
     [QueryProperty("Borne", "Borne")]
-    public partial class infoBorneViewModel 
+    public partial class infoBorneViewModel  : ObservableObject
     {
-        //[ObservableProperty]
-        //Borne borne;
+        [ObservableProperty]
+        Borne borne;
+
+        [ObservableProperty]
+        Borne borneAfficher;
 
         InfoBorneService service;
         public ObservableCollection<Borne> Bornes { get; } = new();
@@ -25,12 +28,11 @@ namespace Ebis.ViewModel
         {
             this.service = service;
 
-            var bornes = service.GetBorne();
+        }
 
-            foreach (var borne in bornes)
-            {
-                Bornes.Add(borne);
-            }
+        partial void OnBorneChanged(Borne value)
+        {
+            BorneAfficher = service.GetBorne(value.idBorne);
         }
     }
 }
